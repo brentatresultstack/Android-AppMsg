@@ -169,7 +169,7 @@ class MsgManager extends Handler implements Comparator<AppMsg> {
 
     static void obtainShowing(Collection<AppMsg> from, Collection<AppMsg> appendTo) {
         for (AppMsg msg : from) {
-            if (msg.isShowing()) {
+            if (msg != null && msg.isShowing()) {
                 appendTo.add(msg);
             }
         }
